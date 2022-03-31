@@ -1,10 +1,16 @@
-export function Quiz() {
+export interface QuizProps {
+	onNext: () => void,
+	questionNumber: number | undefined,
+	currentQuestion: string,
+}
+
+export function Quiz({ onNext, questionNumber, currentQuestion }: QuizProps) {
 	return (
 		<>
-			<h1>Question 1</h1>
-			<p>Do you need a dedicated IDE for the language?</p>
-			<button>Yes</button>
-			<button>No</button>
+			<h1>Question {questionNumber}</h1>
+			<p>{currentQuestion}</p>
+			<button onClick={onNext}>Yes</button>
+			<button onClick={onNext}>No</button>
 		</>
 	)
 }
