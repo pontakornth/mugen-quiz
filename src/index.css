@@ -37,6 +37,11 @@ button {
   font-size: 1.2rem;
   font-weight: 500;
   font-family: inherit;
+  cursor: pointer;
   border: 1px solid #2e337b;
   margin: 0 1rem;
+}
+
+button:active, button:hover {
+  background: #8a8ecb;
 }
