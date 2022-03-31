@@ -4,7 +4,7 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #fafafa;
+  background: #eee;
   font-family: 'Helvetica Neue', arial, sans-serif;
   font-weight: 400;
   color: #444;
@@ -19,12 +19,21 @@ body {
 #app {
   height: 100%;
   text-align: center;
-  background-color: #673ab8;
-  color: #fff;
   font-size: 1.5em;
   padding-top: 100px;
 }
 
 .link {
+  color: aqua;
+}
+
+button {
+  background: #3f448c;
   color: #fff;
+  padding: .3rem .5rem;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1.2rem;
+  border: 1px solid #2e337b;
+  margin: 0 1rem;
 }
