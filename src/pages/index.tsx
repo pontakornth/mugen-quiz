@@ -8,7 +8,10 @@ export function Index({ onNext }: IndexProps) {
 	return (
 		<>
 			<h1>Mugen Quiz</h1>
-			<p>Determining your language like a boss.</p>
+			<p>
+				Choose your favorite programming language. We will ask some
+				questions and determine what is your choice.
+			</p>
 			<button onClick={onNext}>Start the quiz</button>
 		</>
 	)
