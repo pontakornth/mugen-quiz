@@ -12,9 +12,11 @@ function getQuestion() {
 
 export function App() {
   const [questionNumber, setQuestionNumber] = useState(1)
+  const [started, setStarted] = useState(false)
   const [currentQuestion, setCurrentQuestion] = useState<string>(getQuestion())
 
   const handleNext = () => {
+    setStarted(_ => true)
     setQuestionNumber(n => n + 1)
     setCurrentQuestion(oldQuestion => {
       let newQuestion: string
@@ -29,7 +31,7 @@ export function App() {
     <>
       <Router>
         <Route component={() => <Index onNext={handleNext} />} path="/" />
-        <Route component={({ questionNumber }: Partial<QuizProps>) => <Quiz onNext={handleNext} questionNumber={questionNumber} currentQuestion={currentQuestion} />} path="/questions/:questionNumber" />
+        <Route component={({ questionNumber }: Partial<QuizProps>) => <Quiz onNext={handleNext} questionNumber={questionNumber} currentQuestion={currentQuestion} started={started} />} path="/questions/:questionNumber" />
       </Router>
     </>
   )
